@@ -1,0 +1,67 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html" />
+<dom-module id="dgm-navbar">
+    <style no-shim>
+        @import url('http://fonts.googleapis.com/css?family=Open+Sans:400');
+
+        :host                       { background-color: #474747; display: block; box-sizig: border-box; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+        img                         { max-width: 100%; }
+        .main-container             { width: 1100px; margin: 0 auto; overflow: hidden; }
+        .cols-12 .col               { float: left; min-height: 1px; }
+        .col-12                     { width: 100%; }
+        .cols-12 .col .col-inner    { padding: 0 10px; position: relative; }
+        a.site-brand                { padding: 7px 0 0; float: left; display: block; }
+        div.nav-burger              { display: none; width: 20px; height: 20px; margin: 8px 1px 0 0; padding: 5px; float: right; border: 1px solid #616161; border-radius: 3px; }
+        ul                          { margin: 0; list-style: none; float: right; }
+        ul > li                     { float: left; }
+        ul > li > a                 { display: block; padding: 14px 16px; color: #fff; font-size: 12px; text-decoration: none; font-family: "Open Sans"; transition: all 0.1s ease-in-out 0s; }
+        ul > li > a:hover,
+        ul > li > a.active          { background-color: #545454; color: #adadad; }
+    </style>
+    <template>
+        <div class="main-container">
+            <div class="cols-12">
+                <div class="col col-12">
+                    <div class="col-inner">
+                        <a class="site-brand" title="Ir a la página de inicio de datos.gob.mx" href="//datos.gob.mx">
+                            <img role="presentation" alt="datos.gob.mx" src="./img/logo-dgm-white.svg">
+                        </a>
+                        <div class="nav-burger" aria-hidden="true">
+                            <span></span>
+                        </div>
+                        <ul class="site-navigation" role="navigation" aria-label="Navegación principal">
+                            <li>
+                                <a class="page-link" aria-label="Ir al catalogo de datos" title="Ir al catalogo de datos" href="//datos.gob.mx/catalogo">Datos</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Ir a la guía de datos" title="Ir a la guía de datos" href="//datos.gob.mx/guia">Guía</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Conoce las historias con datos" title="Conoce las historias con datos" href="//datos.gob.mx/historias">Historias</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Conoce las apps con datos" title="Conoce las apps con datos" href="//datos.gob.mx/apps">Apps</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Conoce las herramientas con datos" title="Conoce las herramientas con datos" href="//datos.gob.mx/herramientas">Herramientas</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Conoce los avances con datos" title="Conoce los avances con datos" href="//datos.gob.mx/avances">Avances</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Conoce más sobre este sitio" title="Conoce más sobre este sitio" href="//datos.gob.mx/acerca">Acerca</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</dom-module>
+<script>
+    Polymer({
+        is          : 'dgm-navbar',
+        attached    : function() {},
+        detached    : function() {},
+        ready       : function() {}
+    })
+</script>
