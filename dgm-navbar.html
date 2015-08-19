@@ -13,18 +13,26 @@ Example:
     <style no-shim>
         @import url('http://fonts.googleapis.com/css?family=Open+Sans:400');
 
-        :host                       { background-color: #474747; display: block; box-sizig: border-box; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
-        .main-container             { width: 1100px; margin: 0 auto; overflow: hidden; }
-        .cols-12 .col               { float: left; min-height: 1px; }
-        .col-12                     { width: 100%; }
-        .cols-12 .col .col-inner    { padding: 0 10px; position: relative; }
-        a.site-brand                { padding: 7px 0 0; float: left; display: block; }
-        div.nav-burger              { display: none; width: 20px; height: 20px; margin: 8px 1px 0 0; padding: 5px; float: right; border: 1px solid #616161; border-radius: 3px; }
-        ul                          { margin: 0; list-style: none; float: right; }
-        ul > li                     { float: left; }
-        ul > li > a                 { display: block; padding: 14px 16px; color: #fff; font-size: 12px; text-decoration: none; font-family: "Open Sans"; transition: all 0.1s ease-in-out 0s; }
+        :host                                   { background-color: #474747; display: block; box-sizig: border-box; box-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+        .main-container                         { width: 1100px; margin: 0 auto; overflow: hidden; }
+        .cols-12 .col                           { float: left; min-height: 1px; }
+        .col-12                                 { width: 100%; }
+        .cols-12 .col .col-inner                { padding: 0 10px; position: relative; }
+        a.site-brand                            { padding: 7px 0 0; float: left; display: block; }
+        div.nav-burger                          { display: none; width: 20px; height: 20px; margin: 8px 1px 0 0; padding: 5px; float: right; border: 1px solid #616161; border-radius: 3px; }
+        ul                                      { margin: 0; padding: 0; list-style: none; float: right; }
+        ul > li                                 { float: left; }
+        ul > li > a                             { display: block; padding: 14px 20px; color: #fff; font-size: 12px; text-decoration: none; font-family: "Open Sans"; transition: all 0.1s ease-in-out 0s; }
         ul > li > a:hover,
-        ul > li > a.active          { background-color: #545454; color: #adadad; }
+        ul > li > a.active                      { background-color: #545454; color: #adadad; }
+        ul.social-navigation                    { margin-left: 20px; }
+        ul.social-navigation li                 { display: block; width: 32px; height: 100%; text-indent: -9999px; text-align: center; }
+        ul.social-navigation li a               { height: 18px; margin: 13.5px 0; padding: 0; background: url(img/ic-social.png) no-repeat; background-size: 18px; }
+        ul.social-navigation .item-faq a        { width: 22px; height: 22px; margin: 11.5px 0; background: url(img/ic-faq.png); }
+        ul.social-navigation .item-facebook a   { background-position: 0 0; }
+        ul.social-navigation .item-twitter a    { background-position: 0 -18px; }
+        ul.social-navigation .item-linkedin a   { background-position: 0 -36px; }
+        ul.social-navigation .item-github a     { background-position: 0 -54px; }
     </style>
     <template>
         <div class="main-container">
@@ -82,24 +90,28 @@ Example:
                         <div class="nav-burger" aria-hidden="true">
                             <span></span>
                         </div>
+                        <ul class="social-navigation" role="navigation" aria-label="Navegación social">
+                            <li class="item-faq"><a href="//datos.gob.mx/faq">FAQ</a></li>
+                            <li class="item-facebook"><a href="//facebook.com" target="_blank">Facebook</a></li>
+                            <li class="item-twitter"><a href="//twitter.com" target="_blank">Twitter</a></li>
+                            <li class="item-linkedin"><a href="//linkedin.com" target="_blank">LinkedIn</a></li>
+                            <li class="item-github"><a href="//github.com/mxabierto" target="_blank">Github</a></li>
+                        </ul>
                         <ul class="site-navigation" role="navigation" aria-label="Navegación principal">
                             <li>
                                 <a class="page-link" aria-label="Ir al catalogo de datos" title="Ir al catalogo de datos" href="//datos.gob.mx/catalogo">Datos</a>
                             </li>
                             <li>
-                                <a class="page-link" aria-label="Ir a la guía de datos" title="Ir a la guía de datos" href="//datos.gob.mx/guia">Guía</a>
-                            </li>
-                            <li>
-                                <a class="page-link" aria-label="Conoce las historias con datos" title="Conoce las historias con datos" href="//datos.gob.mx/historias">Historias</a>
-                            </li>
-                            <li>
-                                <a class="page-link" aria-label="Conoce las apps con datos" title="Conoce las apps con datos" href="//datos.gob.mx/apps">Apps</a>
-                            </li>
-                            <li>
                                 <a class="page-link" aria-label="Conoce las herramientas con datos" title="Conoce las herramientas con datos" href="//datos.gob.mx/herramientas">Herramientas</a>
                             </li>
                             <li>
-                                <a class="page-link" aria-label="Conoce los avances con datos" title="Conoce los avances con datos" href="//datos.gob.mx/avances">Avances</a>
+                                <a class="page-link" aria-label="Conoce el impacto de los datos" title="Conoce el impacto de los datos" href="//datos.gob.mx/impacto">Impacto</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Ir a la guía de datos" title="Ir a la guía de datos" href="//datos.gob.mx/guia">Guía</a>
+                            </li>
+                            <li>
+                                <a class="page-link" aria-label="Conoce los retos con datos" title="Conoce los retos con datos" href="//datos.gob.mx/retos">Retos</a>
                             </li>
                             <li>
                                 <a class="page-link" aria-label="Conoce más sobre este sitio" title="Conoce más sobre este sitio" href="//datos.gob.mx/acerca">Acerca</a>
