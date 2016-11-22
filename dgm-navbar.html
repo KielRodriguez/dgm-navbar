@@ -125,31 +125,7 @@ Example:
         attached    : function() {},
         detached    : function() {},
         ready       : function() {
-            var collapsed         = false,
-                el                = $( '.navbar-collapse#navbarMainCollapse' ),
-                collapsedSecond  = false,
-                second            = $( '.navbar-collapse#navbarSecondCollapse' );
-            $( '#navbarMain' ).click( function ( e ) {
-                e.preventDefault();
-                if ( collapsed ) {
-                    el.slideUp();
-                    collapsed   = false;
-                } else {
-                    el.slideDown();
-                    collapsed   = true;
-                }
-            });
-
-            $( '#navbarSecond' ).click( function ( e ) {
-                e.preventDefault();
-                if ( collapsedSecond ) {
-                    second.slideUp();
-                    collapsedSecond   = false;
-                } else {
-                    second.slideDown();
-                    collapsedSecond   = true;
-                }
-            });
+          
         }
     })
 </script>
